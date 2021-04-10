@@ -538,6 +538,7 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
 }
 
+
 @media(max-width: 900px) {
     .about__content {
         flex-direction: column-reverse;
@@ -555,22 +556,71 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(min-width: 901px) {
     .about__text {
-	 align-items: center;     
+	 align: center;     
 	 flex: 0 0 70%;
     }
 	
-	 .skill__left {
-	   flex: 0 0 50%;
-    }
-	
-	 .skill__right {
-        flex: 0 0 50%;
-	}
-    
     .about__photo-container {
         flex: 1;
         margin: 0 var(--gutter-huge) 0 0;
     }
+}
+
+/* --------------------------------------- */
+/* ----- Skill ----- */
+/* --------------------------------------- */
+
+.skill_main{
+	  display: block;
+      align-items: center;
+}
+
+.skill_column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.skill_row:after {
+  content: "";
+  display: table;
+  align-items: center;
+  clear: both;
+}
+
+
+.subskill_heading{
+    text-align:initial
+	
+}
+
+.skill__content {
+    display: block;
+    align-items: center;
+}
+
+ .skills_container {
+	text-align: left;
+	list-style-position: inside;
+}
+	
+	
+@media(max-width: 900px) {
+	
+	.skill__content {
+    display: flex;
+	}
+}
+	
+@media(min-width: 901px) {
+ 
+	.skills_container {
+		text-align: left;
+		list-style-position: inside;
+		flex: 0 0 60%;
+	}
+
+    
 }
 
 /* --------------------------------------- */
@@ -631,9 +681,6 @@ body:not(.user-is-tabbing) a:focus {
   background: #6665ee;
 }
 
-.skill_heading{
-	text-align:center
-}
 
 .skill-bars{
   padding: 25px 30px;
